@@ -1,6 +1,6 @@
 ---
-title: nexi-booking
+title: nexi-tools
 description: Describe the main purpose of this kitchen
 ---
 
-# nexi-booking
+# nexi-tools

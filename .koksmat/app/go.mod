@@ -1,4 +1,4 @@
-module github.com/365admin/nexi-booking
+module github.com/365admin/nexi-tools
 
 go 1.20
 

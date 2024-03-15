@@ -7,7 +7,7 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/365admin/nexi-booking/endpoints"
+	"github.com/365admin/nexi-tools/endpoints"
 	"github.com/spf13/cobra"
 	"github.com/swaggest/rest/web"
 	swgui "github.com/swaggest/swgui/v4emb"
