@@ -9,9 +9,11 @@ description: Service for managing users favourite tools
 
 Supporting the sharing of relevant links within the `Nexi Group`.
 
-Latest version is found at [https://tools.home.nexi-intra.com](https://tools.home.nexi-intra.com)
+- Latest version is found at [https://tools.home.nexi-intra.com](https://tools.home.nexi-intra.com)
 
-Internal implemenation at [https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx](https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx)
+- Internal implementation at [https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx](https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx)
+
+- EY Proposal [Invision](https://eyitalia.invisionapp.com/console/share/NWBER3YUFA2/988226792)
 
 This project is organized with PowerShell files for administrating the solution in subfolders to the root of the project.
 
