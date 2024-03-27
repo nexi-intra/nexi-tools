@@ -11,6 +11,8 @@ Supporting the sharing of relevant links within the `Nexi Group`.
 
 Latest version is found at [https://tools.home.nexi-intra.com](https://tools.home.nexi-intra.com)
 
+Internal implemenation at [https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx](https://christianiabpos.sharepoint.com/sites/intra365/SitePages/Tools.aspx)
+
 This project is organized with PowerShell files for administrating the solution in subfolders to the root of the project.
 
 The PowerShell files does not necarylly carry any functionality, but are used for documentation only. Within each folder you will find a readme.md file describing the purpose of the folder.
