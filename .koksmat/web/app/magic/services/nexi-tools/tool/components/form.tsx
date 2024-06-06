@@ -105,6 +105,57 @@ export function ToolForm(props : {tool: ToolItem,editmode:"create"|"update"}) {
    </FormItem>
  )}
 />
+    {/* string */}<FormField
+ control={form.control}
+ name="url"
+ render={({ field }) => (
+   <FormItem>
+     <FormLabel>URL</FormLabel>
+     <FormControl>
+       <Input placeholder="" {...field} />
+
+     </FormControl>
+     <FormDescription>
+       
+     </FormDescription>
+     <FormMessage />
+   </FormItem>
+ )}
+/>
+    {/* string */}<FormField
+ control={form.control}
+ name="status"
+ render={({ field }) => (
+   <FormItem>
+     <FormLabel>Status</FormLabel>
+     <FormControl>
+       <Input placeholder="" {...field} />
+
+     </FormControl>
+     <FormDescription>
+       
+     </FormDescription>
+     <FormMessage />
+   </FormItem>
+ )}
+/>
+    {/* reference */}<FormField
+ control={form.control}
+ name="icon_id"
+ render={({ field }) => (
+   <FormItem>
+     <FormLabel>Icon</FormLabel>
+     <FormControl>
+       <Input placeholder="" {...field} />
+
+     </FormControl>
+     <FormDescription>
+       
+     </FormDescription>
+     <FormMessage />
+   </FormItem>
+ )}
+/>
 
     <div>
    

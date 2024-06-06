@@ -32,6 +32,9 @@ type Tool struct {
         Name string `json:"name"`
     Description string `json:"description"`
     Category_id int `json:"category_id"`
+    Url string `json:"url"`
+    Status string `json:"status"`
+    Icon_id int `json:"icon_id"`
 
 }
 

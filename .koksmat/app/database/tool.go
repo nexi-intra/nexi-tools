@@ -28,6 +28,9 @@ type Tool struct {
     Name string `bun:"name"`
     Description string `bun:"description"`
     Category_id int `bun:"category_id"`
+    Url string `bun:"url"`
+    Status string `bun:"status"`
+    Icon_id int `bun:"icon_id"`
 
 }
 

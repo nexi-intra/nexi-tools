@@ -19,6 +19,9 @@ export interface ToolItem  {
         name : string ;
     description : string ;
     category_id : number ;
+    url : string ;
+    status : string ;
+    icon_id : number ;
 
 }
 
@@ -29,6 +32,9 @@ export const ToolSchema = z.object({
         name : z.string(), 
     description : z.string().optional(), 
     category_id : z.number(), 
+    url : z.string(), 
+    status : z.string().optional(), 
+    icon_id : z.number().optional(), 
 
 });
 

@@ -200,6 +200,153 @@
     ]
   },
   "entities": {
+    "language": {
+      "name": "language",
+      "description": "Language",
+      "baselineattributes": [
+        {
+          "name": "tenant",
+          "type": "string",
+          "displayname": "Tenant",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "searchindex",
+          "type": "string",
+          "displayname": "Search Index",
+          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "displayname": "Name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "displayname": "Description",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "additionalattributes": [
+        {
+          "name": "code",
+          "displayname": "Code",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "translation": {
+      "name": "translation",
+      "description": "Translation",
+      "baselineattributes": [
+        {
+          "name": "tenant",
+          "type": "string",
+          "displayname": "Tenant",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "searchindex",
+          "type": "string",
+          "displayname": "Search Index",
+          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "displayname": "Name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "displayname": "Description",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "additionalattributes": [
+        {
+          "name": "language",
+          "displayname": "Language",
+          "type": "reference",
+          "required": true,
+          "entity": {
+            "name": "language",
+            "description": "Language",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "code",
+                "displayname": "Code",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "translation",
+          "displayname": "Translation",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "tablename",
+          "displayname": "Table Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "fieldname",
+          "displayname": "Field Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "recordid",
+          "displayname": "Record Id",
+          "type": "int",
+          "required": true
+        }
+      ]
+    },
     "category": {
       "name": "category",
       "description": "Category of a tool",
@@ -233,6 +380,53 @@
         }
       ],
       "additionalattributes": null
+    },
+    "icon": {
+      "name": "icon",
+      "description": "Icon",
+      "baselineattributes": [
+        {
+          "name": "tenant",
+          "type": "string",
+          "displayname": "Tenant",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "searchindex",
+          "type": "string",
+          "displayname": "Search Index",
+          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "displayname": "Name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "displayname": "Description",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "additionalattributes": [
+        {
+          "name": "icon",
+          "displayname": "Icon",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "base64",
+          "displayname": "Base64",
+          "type": "string",
+          "required": true
+        }
+      ]
     },
     "tool": {
       "name": "tool",
@@ -305,6 +499,276 @@
               }
             ],
             "additionalattributes": null
+          }
+        },
+        {
+          "name": "url",
+          "displayname": "URL",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "status",
+          "displayname": "Status",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "icon",
+          "displayname": "Icon",
+          "type": "reference",
+          "required": false,
+          "entity": {
+            "name": "icon",
+            "description": "Icon",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "icon",
+                "displayname": "Icon",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "base64",
+                "displayname": "Base64",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "attachment": {
+      "name": "attachment",
+      "description": "Attachment",
+      "baselineattributes": [
+        {
+          "name": "tenant",
+          "type": "string",
+          "displayname": "Tenant",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "searchindex",
+          "type": "string",
+          "displayname": "Search Index",
+          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "displayname": "Name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "displayname": "Description",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "additionalattributes": [
+        {
+          "name": "sortorder",
+          "displayname": "Sort Order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "filename",
+          "displayname": "Filename",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "link",
+          "displayname": "Link",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "mimetype",
+          "displayname": "Mimetype",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "tool",
+          "displayname": "Tool",
+          "type": "reference",
+          "required": true,
+          "entity": {
+            "name": "tool",
+            "description": "Tool",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "category",
+                "displayname": "Category",
+                "type": "reference",
+                "required": true,
+                "entity": {
+                  "name": "category",
+                  "description": "Category of a tool",
+                  "baselineattributes": [
+                    {
+                      "name": "tenant",
+                      "type": "string",
+                      "displayname": "Tenant",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "searchindex",
+                      "type": "string",
+                      "displayname": "Search Index",
+                      "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "displayname": "Name",
+                      "required": true
+                    },
+                    {
+                      "name": "description",
+                      "displayname": "Description",
+                      "type": "string",
+                      "required": false
+                    }
+                  ],
+                  "additionalattributes": null
+                }
+              },
+              {
+                "name": "url",
+                "displayname": "URL",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "status",
+                "displayname": "Status",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "icon",
+                "displayname": "Icon",
+                "type": "reference",
+                "required": false,
+                "entity": {
+                  "name": "icon",
+                  "description": "Icon",
+                  "baselineattributes": [
+                    {
+                      "name": "tenant",
+                      "type": "string",
+                      "displayname": "Tenant",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "searchindex",
+                      "type": "string",
+                      "displayname": "Search Index",
+                      "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "displayname": "Name",
+                      "required": true
+                    },
+                    {
+                      "name": "description",
+                      "displayname": "Description",
+                      "type": "string",
+                      "required": false
+                    }
+                  ],
+                  "additionalattributes": [
+                    {
+                      "name": "icon",
+                      "displayname": "Icon",
+                      "type": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "base64",
+                      "displayname": "Base64",
+                      "type": "string",
+                      "required": true
+                    }
+                  ]
+                }
+              }
+            ]
           }
         }
       ]
@@ -414,6 +878,379 @@
               }
             ],
             "additionalattributes": null
+          }
+        }
+      ]
+    },
+    "user": {
+      "name": "user",
+      "description": "User",
+      "baselineattributes": [
+        {
+          "name": "tenant",
+          "type": "string",
+          "displayname": "Tenant",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "searchindex",
+          "type": "string",
+          "displayname": "Search Index",
+          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+          "hidden": true,
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "displayname": "Name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "displayname": "Description",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "additionalattributes": [
+        {
+          "name": "email",
+          "displayname": "Email",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "firstname",
+          "displayname": "First Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "lastname",
+          "displayname": "Last Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "language",
+          "displayname": "Language",
+          "type": "reference",
+          "required": true,
+          "entity": {
+            "name": "language",
+            "description": "Language",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "code",
+                "displayname": "Code",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "country",
+          "displayname": "Country",
+          "type": "reference",
+          "required": true,
+          "entity": {
+            "name": "country",
+            "displayname": "Country",
+            "description": "Country",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "region",
+                "type": "reference",
+                "required": true,
+                "entity": {
+                  "name": "region",
+                  "description": "Region",
+                  "baselineattributes": [
+                    {
+                      "name": "tenant",
+                      "type": "string",
+                      "displayname": "Tenant",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "searchindex",
+                      "type": "string",
+                      "displayname": "Search Index",
+                      "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "displayname": "Name",
+                      "required": true
+                    },
+                    {
+                      "name": "description",
+                      "displayname": "Description",
+                      "type": "string",
+                      "required": false
+                    }
+                  ],
+                  "additionalattributes": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": "region",
+          "displayname": "Region",
+          "type": "reference",
+          "required": true,
+          "entity": {
+            "name": "region",
+            "description": "Region",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": null
+          }
+        },
+        {
+          "name": "status",
+          "displayname": "Status",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "favourites",
+          "displayname": "Favourites",
+          "type": "array",
+          "required": false,
+          "entity": {
+            "name": "tool",
+            "description": "Tool",
+            "baselineattributes": [
+              {
+                "name": "tenant",
+                "type": "string",
+                "displayname": "Tenant",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "searchindex",
+                "type": "string",
+                "displayname": "Search Index",
+                "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                "hidden": true,
+                "required": true
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "displayname": "Name",
+                "required": true
+              },
+              {
+                "name": "description",
+                "displayname": "Description",
+                "type": "string",
+                "required": false
+              }
+            ],
+            "additionalattributes": [
+              {
+                "name": "category",
+                "displayname": "Category",
+                "type": "reference",
+                "required": true,
+                "entity": {
+                  "name": "category",
+                  "description": "Category of a tool",
+                  "baselineattributes": [
+                    {
+                      "name": "tenant",
+                      "type": "string",
+                      "displayname": "Tenant",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "searchindex",
+                      "type": "string",
+                      "displayname": "Search Index",
+                      "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "displayname": "Name",
+                      "required": true
+                    },
+                    {
+                      "name": "description",
+                      "displayname": "Description",
+                      "type": "string",
+                      "required": false
+                    }
+                  ],
+                  "additionalattributes": null
+                }
+              },
+              {
+                "name": "url",
+                "displayname": "URL",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "status",
+                "displayname": "Status",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "icon",
+                "displayname": "Icon",
+                "type": "reference",
+                "required": false,
+                "entity": {
+                  "name": "icon",
+                  "description": "Icon",
+                  "baselineattributes": [
+                    {
+                      "name": "tenant",
+                      "type": "string",
+                      "displayname": "Tenant",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "searchindex",
+                      "type": "string",
+                      "displayname": "Search Index",
+                      "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                      "hidden": true,
+                      "required": true
+                    },
+                    {
+                      "name": "name",
+                      "type": "string",
+                      "displayname": "Name",
+                      "required": true
+                    },
+                    {
+                      "name": "description",
+                      "displayname": "Description",
+                      "type": "string",
+                      "required": false
+                    }
+                  ],
+                  "additionalattributes": [
+                    {
+                      "name": "icon",
+                      "displayname": "Icon",
+                      "type": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "base64",
+                      "displayname": "Base64",
+                      "type": "string",
+                      "required": true
+                    }
+                  ]
+                }
+              }
+            ]
           }
         }
       ]
@@ -695,6 +1532,71 @@
                   }
                 ],
                 "additionalattributes": null
+              }
+            },
+            {
+              "name": "url",
+              "displayname": "URL",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "status",
+              "displayname": "Status",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "icon",
+              "displayname": "Icon",
+              "type": "reference",
+              "required": false,
+              "entity": {
+                "name": "icon",
+                "description": "Icon",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "icon",
+                    "displayname": "Icon",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "base64",
+                    "displayname": "Base64",
+                    "type": "string",
+                    "required": true
+                  }
+                ]
               }
             }
           ]
@@ -982,6 +1884,1328 @@
         },
         "model": "country",
         "objectname": "Country"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "description": "Users",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "user",
+          "description": "User",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": [
+            {
+              "name": "email",
+              "displayname": "Email",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "firstname",
+              "displayname": "First Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "lastname",
+              "displayname": "Last Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "language",
+              "displayname": "Language",
+              "type": "reference",
+              "required": true,
+              "entity": {
+                "name": "language",
+                "description": "Language",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "code",
+                    "displayname": "Code",
+                    "type": "string",
+                    "required": true
+                  }
+                ]
+              }
+            },
+            {
+              "name": "country",
+              "displayname": "Country",
+              "type": "reference",
+              "required": true,
+              "entity": {
+                "name": "country",
+                "displayname": "Country",
+                "description": "Country",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "region",
+                    "type": "reference",
+                    "required": true,
+                    "entity": {
+                      "name": "region",
+                      "description": "Region",
+                      "baselineattributes": [
+                        {
+                          "name": "tenant",
+                          "type": "string",
+                          "displayname": "Tenant",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "searchindex",
+                          "type": "string",
+                          "displayname": "Search Index",
+                          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "name",
+                          "type": "string",
+                          "displayname": "Name",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "displayname": "Description",
+                          "type": "string",
+                          "required": false
+                        }
+                      ],
+                      "additionalattributes": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "region",
+              "displayname": "Region",
+              "type": "reference",
+              "required": true,
+              "entity": {
+                "name": "region",
+                "description": "Region",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": null
+              }
+            },
+            {
+              "name": "status",
+              "displayname": "Status",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "favourites",
+              "displayname": "Favourites",
+              "type": "array",
+              "required": false,
+              "entity": {
+                "name": "tool",
+                "description": "Tool",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "category",
+                    "displayname": "Category",
+                    "type": "reference",
+                    "required": true,
+                    "entity": {
+                      "name": "category",
+                      "description": "Category of a tool",
+                      "baselineattributes": [
+                        {
+                          "name": "tenant",
+                          "type": "string",
+                          "displayname": "Tenant",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "searchindex",
+                          "type": "string",
+                          "displayname": "Search Index",
+                          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "name",
+                          "type": "string",
+                          "displayname": "Name",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "displayname": "Description",
+                          "type": "string",
+                          "required": false
+                        }
+                      ],
+                      "additionalattributes": null
+                    }
+                  },
+                  {
+                    "name": "url",
+                    "displayname": "URL",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "status",
+                    "displayname": "Status",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "icon",
+                    "displayname": "Icon",
+                    "type": "reference",
+                    "required": false,
+                    "entity": {
+                      "name": "icon",
+                      "description": "Icon",
+                      "baselineattributes": [
+                        {
+                          "name": "tenant",
+                          "type": "string",
+                          "displayname": "Tenant",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "searchindex",
+                          "type": "string",
+                          "displayname": "Search Index",
+                          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "name",
+                          "type": "string",
+                          "displayname": "Name",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "displayname": "Description",
+                          "type": "string",
+                          "required": false
+                        }
+                      ],
+                      "additionalattributes": [
+                        {
+                          "name": "icon",
+                          "displayname": "Icon",
+                          "type": "string",
+                          "required": true
+                        },
+                        {
+                          "name": "base64",
+                          "displayname": "Base64",
+                          "type": "string",
+                          "required": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "model": "user",
+        "objectname": "User"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "language",
+      "description": "Languages",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "language",
+          "description": "Language",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": [
+            {
+              "name": "code",
+              "displayname": "Code",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "model": "language",
+        "objectname": "Language"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "translation",
+      "description": "Translations",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "translation",
+          "description": "Translation",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": [
+            {
+              "name": "language",
+              "displayname": "Language",
+              "type": "reference",
+              "required": true,
+              "entity": {
+                "name": "language",
+                "description": "Language",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "code",
+                    "displayname": "Code",
+                    "type": "string",
+                    "required": true
+                  }
+                ]
+              }
+            },
+            {
+              "name": "translation",
+              "displayname": "Translation",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "tablename",
+              "displayname": "Table Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "fieldname",
+              "displayname": "Field Name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "recordid",
+              "displayname": "Record Id",
+              "type": "int",
+              "required": true
+            }
+          ]
+        },
+        "model": "translation",
+        "objectname": "Translation"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "description": "Icons",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "icon",
+          "description": "Icon",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": [
+            {
+              "name": "icon",
+              "displayname": "Icon",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "base64",
+              "displayname": "Base64",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "model": "icon",
+        "objectname": "Icon"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "attachment",
+      "description": "Attachments",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "attachment",
+          "description": "Attachment",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": [
+            {
+              "name": "sortorder",
+              "displayname": "Sort Order",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "filename",
+              "displayname": "Filename",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "link",
+              "displayname": "Link",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "mimetype",
+              "displayname": "Mimetype",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "tool",
+              "displayname": "Tool",
+              "type": "reference",
+              "required": true,
+              "entity": {
+                "name": "tool",
+                "description": "Tool",
+                "baselineattributes": [
+                  {
+                    "name": "tenant",
+                    "type": "string",
+                    "displayname": "Tenant",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "searchindex",
+                    "type": "string",
+                    "displayname": "Search Index",
+                    "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                    "hidden": true,
+                    "required": true
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "displayname": "Name",
+                    "required": true
+                  },
+                  {
+                    "name": "description",
+                    "displayname": "Description",
+                    "type": "string",
+                    "required": false
+                  }
+                ],
+                "additionalattributes": [
+                  {
+                    "name": "category",
+                    "displayname": "Category",
+                    "type": "reference",
+                    "required": true,
+                    "entity": {
+                      "name": "category",
+                      "description": "Category of a tool",
+                      "baselineattributes": [
+                        {
+                          "name": "tenant",
+                          "type": "string",
+                          "displayname": "Tenant",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "searchindex",
+                          "type": "string",
+                          "displayname": "Search Index",
+                          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "name",
+                          "type": "string",
+                          "displayname": "Name",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "displayname": "Description",
+                          "type": "string",
+                          "required": false
+                        }
+                      ],
+                      "additionalattributes": null
+                    }
+                  },
+                  {
+                    "name": "url",
+                    "displayname": "URL",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "name": "status",
+                    "displayname": "Status",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "name": "icon",
+                    "displayname": "Icon",
+                    "type": "reference",
+                    "required": false,
+                    "entity": {
+                      "name": "icon",
+                      "description": "Icon",
+                      "baselineattributes": [
+                        {
+                          "name": "tenant",
+                          "type": "string",
+                          "displayname": "Tenant",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "searchindex",
+                          "type": "string",
+                          "displayname": "Search Index",
+                          "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+                          "hidden": true,
+                          "required": true
+                        },
+                        {
+                          "name": "name",
+                          "type": "string",
+                          "displayname": "Name",
+                          "required": true
+                        },
+                        {
+                          "name": "description",
+                          "displayname": "Description",
+                          "type": "string",
+                          "required": false
+                        }
+                      ],
+                      "additionalattributes": [
+                        {
+                          "name": "icon",
+                          "displayname": "Icon",
+                          "type": "string",
+                          "required": true
+                        },
+                        {
+                          "name": "base64",
+                          "displayname": "Base64",
+                          "type": "string",
+                          "required": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "model": "attachment",
+        "objectname": "Attachment"
+      },
+      "methods": [
+        {
+          "name": "read",
+          "description": "Read a single item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "create",
+          "description": "Create a new item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to create",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "update",
+          "description": "Update an existing item",
+          "parameters": [
+            {
+              "name": "item",
+              "description": "The item to update",
+              "type": "object",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "object"
+          }
+        },
+        {
+          "name": "delete",
+          "description": "Delete an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "The id of the item",
+              "type": "int64",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "search",
+          "description": "Search for items",
+          "parameters": [
+            {
+              "name": "query",
+              "description": "The search query",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "returns": {
+            "type": "page"
+          }
+        }
+      ]
+    },
+    {
+      "name": "region",
+      "description": "Regions",
+      "entity": {
+        "type": "record",
+        "entity": {
+          "name": "region",
+          "description": "Region",
+          "baselineattributes": [
+            {
+              "name": "tenant",
+              "type": "string",
+              "displayname": "Tenant",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "searchindex",
+              "type": "string",
+              "displayname": "Search Index",
+              "description": "Search Index is used for concatenating all searchable fields in a single field making in easier to search\n",
+              "hidden": true,
+              "required": true
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "displayname": "Name",
+              "required": true
+            },
+            {
+              "name": "description",
+              "displayname": "Description",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "additionalattributes": null
+        },
+        "model": "region",
+        "objectname": "Region"
       },
       "methods": [
         {

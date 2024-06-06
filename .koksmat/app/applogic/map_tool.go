@@ -26,6 +26,9 @@ func MapToolOutgoing(db database.Tool) toolmodel.Tool {
                 Name : db.Name,
         Description : db.Description,
                 Category_id : db.Category_id,
+        Url : db.Url,
+        Status : db.Status,
+                Icon_id : db.Icon_id,
 
     }
 }
@@ -40,6 +43,9 @@ func MapToolIncoming(in toolmodel.Tool) database.Tool {
                 Name : in.Name,
         Description : in.Description,
                 Category_id : in.Category_id,
+        Url : in.Url,
+        Status : in.Status,
+                Icon_id : in.Icon_id,
         Searchindex : in.Name,
 
     }

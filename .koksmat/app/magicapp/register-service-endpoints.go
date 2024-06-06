@@ -17,4 +17,10 @@ func RegisterServiceEndpoints(root micro.Group) {
         root.AddEndpoint("tool", micro.HandlerFunc(services.HandleToolRequests))
         root.AddEndpoint("region", micro.HandlerFunc(services.HandleRegionRequests))
         root.AddEndpoint("country", micro.HandlerFunc(services.HandleCountryRequests))
+        root.AddEndpoint("user", micro.HandlerFunc(services.HandleUserRequests))
+        root.AddEndpoint("language", micro.HandlerFunc(services.HandleLanguageRequests))
+        root.AddEndpoint("translation", micro.HandlerFunc(services.HandleTranslationRequests))
+        root.AddEndpoint("icon", micro.HandlerFunc(services.HandleIconRequests))
+        root.AddEndpoint("attachment", micro.HandlerFunc(services.HandleAttachmentRequests))
+        root.AddEndpoint("region", micro.HandlerFunc(services.HandleRegionRequests))
     }

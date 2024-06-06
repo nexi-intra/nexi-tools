@@ -37,6 +37,15 @@ export default function ReadTool(props: { id: number }) {
     </div>    <div>
         <div className="font-bold" >Category</div>
         <div>{tool.category_id}</div>
+    </div>    <div>
+        <div className="font-bold" >URL</div>
+        <div>{tool.url}</div>
+    </div>    <div>
+        <div className="font-bold" >Status</div>
+        <div>{tool.status}</div>
+    </div>    <div>
+        <div className="font-bold" >Icon</div>
+        <div>{tool.icon_id}</div>
     </div>
     <div>
         <div>
